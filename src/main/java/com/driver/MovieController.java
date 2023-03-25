@@ -56,9 +56,9 @@ public class MovieController {
     }
 
     @GetMapping("/get-all-movies")
-    public ResponseEntity<List<Movie>> findAllMovies(){
+    public ResponseEntity<List<String>> findAllMovies(){
 
-        List<Movie> movies =movieservice.getAllMovies();
+        List<String> movies =movieservice.getAllMovies();
         return new ResponseEntity<>(movies, HttpStatus.CREATED);
     }
 

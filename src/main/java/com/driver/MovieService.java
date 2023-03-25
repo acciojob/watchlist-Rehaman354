@@ -46,10 +46,10 @@ public class MovieService {
         return new ArrayList<>();
     }
 
-    public List<Movie> getAllMovies() {
-        List<Movie> movieList=new ArrayList<>();
+    public List<String> getAllMovies() {
+        List<String> movieList=new ArrayList<>();
 
-        for(Movie movie:movieRepo.movieData.values())
+        for(String movie:movieRepo.movieData.keySet())
             movieList.add(movie);
         return movieList;
     }
